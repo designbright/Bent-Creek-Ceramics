@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="Favicon.jpg" href="Favicon.jpg" sizes="32x32" />
+  <link rel="icon" type="Favicon.jpg" href="Favicon.jpg" sizes="16x16" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700|Roboto:300,300i,400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="newsletter.css">
+  <title>Newsletter</title>
+</head>
+
+<body>
+
+
+  <header>
+    <div class="logonav">
+      <a href="index.html" id="logo"><img border="0" alt="CeramicPot" src="optimized/bent-creek-logo.png" width="50" height="50"></a>
+    </div>
+    <nav class="main-navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+  </header>
+
+  <!-- END HEADER -->
+
+
+  <section class="background">
+
+    <div class="formcontainer">
+
+      <h2>Sign Up for Our Weekly Newsletter</h2>
+      <p>Stay up to date with events, activities, news, and specials.</p>
+      <input type="text" id="nameInput" name="Name" value="Name">
+      <br>
+      <input type="email" id="emailInput" name="Email" value="Email">
+      <br>
+      <button id="signupButton">Submit</button>
+    </div>
+
+  </section>
+
+
+  <script type="text/javascript">
+    var nameInput = document.getElementById('nameInput');
+    var emailInput = document.getElementById('emailInput');
+    var signupButton = document.getElementById('signupButton');
+    signupButton.addEventListener('click', function(e) {
+      var nameVal = nameInput.value;
+      var emailVal = emailInput.value;
+      if (nameVal && emailVal) {
+        alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
+        nameInput.value = "";
+        emailInput.value = "";
+      } else {
+        alert('We would love for you to sign up, please provide both your name and email address.');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
